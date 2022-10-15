@@ -11,6 +11,9 @@ const nextConfig = {
 
     return config
   },
+  images: {
+    domains: ['cloudflare-ipfs.com'],
+  },
 }
 
 module.exports = nextConfig

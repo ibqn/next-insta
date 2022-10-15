@@ -1,3 +1,4 @@
+import Feed from 'components/feed'
 import Header from 'components/header'
 import Head from 'next/head'
 
@@ -11,6 +12,7 @@ const Home = () => {
       </Head>
 
       <Header />
+      <Feed />
     </>
   )
 }

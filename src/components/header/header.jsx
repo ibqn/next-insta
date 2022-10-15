@@ -22,7 +22,7 @@ const buttonLinks = [
 
 const Header = () => {
   return (
-    <div className="sticky top-0 border-b shadow-sm">
+    <div className="sticky top-0 border-b bg-white shadow-sm">
       <nav className="mx-auto flex h-[60px] max-w-5xl items-center justify-between px-5">
         <div className="flex items-end">
           <Link href="/">
