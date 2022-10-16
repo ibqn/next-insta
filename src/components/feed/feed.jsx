@@ -1,3 +1,4 @@
+import Posts from 'components/posts'
 import Stories from 'components/stories'
 
 const Feed = () => {
@@ -7,7 +8,9 @@ const Feed = () => {
         <section>
           <Stories />
         </section>
-        <section>Posts</section>
+        <section>
+          <Posts />
+        </section>
       </div>
     </main>
   )
