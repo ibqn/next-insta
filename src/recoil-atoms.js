@@ -5,4 +5,9 @@ const storiesState = atom({
   default: [],
 })
 
-export { storiesState }
+const postsState = atom({
+  key: 'postsState',
+  default: [],
+})
+
+export { storiesState, postsState }

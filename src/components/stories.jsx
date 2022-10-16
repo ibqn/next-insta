@@ -2,16 +2,10 @@ import { useEffect } from 'react'
 import { useRecoilState } from 'recoil'
 import { storiesState } from 'recoil-atoms'
 import Image from 'next/future/image'
-import { faker } from '@faker-js/faker'
-
-const getUserStory = () => ({
-  userId: faker.datatype.uuid(),
-  username: faker.internet.userName(),
-  avatar: faker.image.avatar(),
-})
+import { getUserData } from 'util/user-data'
 
 const populateStories = () =>
-  Array.from({ length: 30 }).map(() => getUserStory())
+  Array.from({ length: 30 }).map(() => getUserData())
 
 const Stories = () => {
   const [stories, setStories] = useRecoilState(storiesState)
