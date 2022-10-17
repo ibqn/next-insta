@@ -27,7 +27,7 @@ const Stories = () => {
               width="83"
               className="rounded-full border-[3px] border-red-500 p-[1.5px]"
               src={avatar}
-              alt="avatar"
+              alt="Avatar"
             />
             <p className="w-[60px] truncate text-xs">{username}</p>
           </div>
