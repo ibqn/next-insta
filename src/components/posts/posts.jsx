@@ -4,6 +4,10 @@ import { postsState } from 'recoil-atoms'
 import Image from 'next/future/image'
 import { getUserData } from 'util/user-data'
 import MoreOptionsIcon from './more-options.svg'
+import Like from './like.svg'
+import Comment from './comment.svg'
+import SharePost from './share-post.svg'
+import Save from './save.svg'
 
 const populatePosts = () =>
   Promise.all(
@@ -17,6 +21,13 @@ const populatePosts = () =>
       }
     })
   )
+
+const postButtons = [
+  { icon: Like },
+  { icon: Comment },
+  { icon: SharePost },
+  { icon: Save },
+]
 
 const Posts = () => {
   const [posts, setPosts] = useRecoilState(postsState)
@@ -33,7 +44,7 @@ const Posts = () => {
   return (
     <div className="mt-5 flex flex-col gap-4">
       {posts.map((post) => {
-        const { userId, username, avatar, postImage } = post
+        const { userId, username, avatar, postImage, postTitle } = post
 
         return (
           <div
@@ -56,6 +67,25 @@ const Posts = () => {
               <MoreOptionsIcon className="ml-auto" />
             </div>
             <Image priority src={postImage} alt="Post" />
+            <div className="py flex flex-row py-3 px-1">
+              {postButtons.map((button, index) => {
+                const { icon: Icon } = button
+                return (
+                  <button className="group px-2 last:ml-auto" key={index}>
+                    <Icon className="group-hover:fill-[#8e8e8e] group-hover:text-[#8e8e8e]" />
+                  </button>
+                )
+              })}
+            </div>
+            <div className="whitespace-nowrap px-3 text-sm font-medium">
+              <span>46,151</span> likes
+            </div>
+            <div className="p-3 text-sm">
+              <div className="line-clamp-2">
+                <span className="font-bold">{username}</span>{' '}
+                <span className="">{postTitle}</span>
+              </div>
+            </div>
           </div>
         )
       })}
