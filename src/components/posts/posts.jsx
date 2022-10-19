@@ -8,6 +8,7 @@ import Like from './like.svg'
 import Comment from './comment.svg'
 import SharePost from './share-post.svg'
 import Save from './save.svg'
+import PostTitle from 'components/post-title'
 
 const populatePosts = () =>
   Promise.all(
@@ -81,10 +82,7 @@ const Posts = () => {
               <span>46,151</span> likes
             </div>
             <div className="p-3 text-sm">
-              <div className="line-clamp-2">
-                <span className="font-bold">{username}</span>{' '}
-                <span className="">{postTitle}</span>
-              </div>
+              <PostTitle username={username} postTitle={postTitle} />
             </div>
           </div>
         )
