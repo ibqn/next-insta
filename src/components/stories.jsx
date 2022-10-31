@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useRecoilState } from 'recoil'
 import { storiesState } from 'recoil-atoms'
-import Image from 'next/future/image'
+import Image from 'next/image'
 import { getUserData } from 'util/user-data'
 
 const populateStories = () =>

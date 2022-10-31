@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useRecoilState } from 'recoil'
 import { postsState } from 'recoil-atoms'
-import Image from 'next/future/image'
+import Image from 'next/image'
 import { getUserData } from 'util/user-data'
 import MoreOptionsIcon from './more-options.svg'
 import EmojiIcon from './emoji.svg'
@@ -90,13 +90,12 @@ const Posts = () => {
             </div>
             <div className="flex items-center border-t p-3">
               <EmojiIcon className="mr-3" />
-              {/* <input type="text" placeholder="Add a comment..." /> */}
               <textarea
                 aria-label="Add a comment…"
                 placeholder="Add a comment…"
                 className="h-[18px] grow resize-none appearance-none justify-center border-none text-sm leading-[18px] outline-none"
-                autocomplete="off"
-                autocorrect="off"
+                autoComplete="off"
+                autoCorrect="off"
               ></textarea>
               <button className="ml-auto text-sm font-semibold capitalize text-[#0095F6] opacity-30">
                 post

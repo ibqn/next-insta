@@ -1,4 +1,4 @@
-import Image from 'next/future/image'
+import Image from 'next/image'
 import LogoImage from './logo.svg'
 import DownChevronIcon from './down-chevron.svg'
 import SearchIcon from './search.svg'
@@ -26,9 +26,7 @@ const Header = () => {
       <nav className="mx-auto flex h-[60px] max-w-5xl items-center justify-between px-5">
         <div className="flex items-end">
           <Link href="/">
-            <a>
-              <LogoImage className="fill-dark text-dark" />
-            </a>
+            <LogoImage className="fill-dark text-dark" />
           </Link>
 
           <button className="flex h-9 items-center p-2">
