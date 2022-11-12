@@ -11,8 +11,8 @@ const Stories = () => {
   const [stories, setStories] = useRecoilState(storiesState)
 
   useEffect(() => {
-    const newSories = populateStories()
-    setStories(newSories)
+    const newStories = populateStories()
+    setStories(newStories)
   }, [])
 
   return (
