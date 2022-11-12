@@ -21,14 +21,17 @@ const Stories = () => {
         const { userId, username, avatar } = story
         return (
           <div key={userId} className="flex flex-col gap-2">
-            <Image
-              priority
-              height="83"
-              width="83"
-              className="rounded-full border-[3px] border-red-500 p-[1.5px]"
-              src={avatar}
-              alt="Avatar"
-            />
+            <div className="h-[66px] w-[66px] overflow-hidden rounded-full border-[3px] border-red-500 p-[1.5px]">
+              <Image
+                priority
+                width={83}
+                height={83}
+                className="rounded-full"
+                src={avatar}
+                alt="Avatar"
+              />
+            </div>
+
             <p className="w-[60px] truncate text-xs">{username}</p>
           </div>
         )
